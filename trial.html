@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosti - Free Trial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <!-- Add navigation buttons outside of resultsView -->
+        <div class="navigation-buttons">
+            <button class="nav-btn return-btn" id="returnBtn">
+                <i class="fas fa-arrow-left"></i> Return Back
+            </button>
+            <button class="nav-btn home-btn" id="homeBtn">
+                <i class="fas fa-home"></i> Main Page
+            </button>
+        </div>
+
+        <!-- Initial View -->
+        <div class="trial-container" id="initialView">
+            <h1>Try Rosti For Free</h1>
+            <p class="trial-description">
+                Ready to get brutally honest feedback? Paste your website or LinkedIn URL below 
+                and our AI will roast your online presence. No sign-up required for your first roast!
+            </p>
+
+            <div class="url-input-container">
+                <input type="url" 
+                       id="urlInput" 
+                       placeholder="Paste your URL here (website or LinkedIn profile)"
+                       class="url-input">
+                <button class="roast-btn" id="roastBtn">Roast It! 🔥</button>
+            </div>
+        </div>
+
+        <!-- Results View (Initially Hidden) -->
+        <div class="results-view" id="resultsView" style="display: none;">
+            <div class="roast-content" id="roastResult">
+                <!-- Roast results will be displayed here -->
+            </div>
+
+            <div class="action-buttons">
+               <!-- <button class="download-btn" id="downloadBtn">
+                    <i class="fas fa-download"></i> Download PDF
+                </button>-->
+                <div class="share-dropdown">
+                    <button class="share-btn" id="shareBtn">
+                        <i class="fas fa-share-alt"></i> Share
+                    </button>
+                    <div class="share-options" id="shareOptions">
+                        <button class="social-btn twitter" data-platform="twitter">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </button>
+                        <button class="social-btn facebook" data-platform="facebook">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </button>
+                        <button class="social-btn linkedin" data-platform="linkedin">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </button>
+                        <button class="social-btn copy-link" id="copyLinkBtn">
+                            <i class="fas fa-link"></i> Copy Link
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="trial.js"></script>
+    <!-- Add html2pdf library for PDF generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <!-- Add this for copy confirmation -->
+    <div class="copy-alert" id="copyAlert">Link copied to clipboard!</div>
+
+    <!-- Add this right after the <main> opening tag -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">Preparing your roast... 🔥</p>
+        </div>
+    </div>
+</body>
+</html> 

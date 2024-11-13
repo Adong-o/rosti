@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosti - Paste link, Get roasted</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./Untitled-removebg-preview.png">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loading-screen" id="loadingScreen" style="display: none;">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">Loading Trial Page... 🔥</p>
+        </div>
+    </div>
+    
+    <a href="javascript:void(0);" class="btn free-trial" id="freeTrialBtn">Try for Free</a>
+    
+    <main class="hero-section">
+        <h1>Rosti</h1>
+        <p class="tagline">Get your website brutally roasted</p>
+        
+        <div class="auth-buttons">
+            <button class="btn login" id="loginBtn">Log In</button>
+            <button class="btn signup" id="signupBtn">Sign Up</button>
+        </div>
+        
+        
+        <div class="explanation">
+            <h2>How it works</h2>
+            <div class="steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <p>Paste your website and get roasted</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <p>Our AI analyzes your content</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <p>Get a hilarious (and maybe helpful) roast of your online presence</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="pricing-section">
+        <h2 class="pricing-title">Pricing <span class="coming-soon">Coming Soon!</span></h2>
+        
+        <div class="pricing-container">
+            <!-- Basic Plan -->
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Basic</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">4.99</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> 3 Roasts per month</li>
+                        <li><i class="fas fa-check"></i> PDF Export</li>
+                        <li><i class="fas fa-check"></i> Social Sharing</li>
+                    </ul>
+                </div>
+                <button class="pricing-btn">Coming Soon</button>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="pricing-card premium">
+                <div class="popular-badge">Most Popular</div>
+                <div class="pricing-header">
+                    <h3>Premium</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">14.99</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <div class="pricing-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i> Unlimited Roasts</li>
+                        <li><i class="fas fa-check"></i> Detailed Design Analysis</li>
+                        <li><i class="fas fa-check"></i> Content Improvement Tips</li>
+                        <li><i class="fas fa-check"></i> UX/UI Recommendations</li>
+                        <li><i class="fas fa-check"></i> Conversion Rate Tips</li>
+                    </ul>
+                </div>
+                <button class="pricing-btn premium-btn">Coming Soon</button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="./Untitled-removebg-preview.png" alt="Rosti Logo" class="footer-logo">
+                <p>Brutally honest roasts for your online presence</p>
+            </div>
+            
+            <div class="footer-section links">
+                <h3>Associated with Rosti</h3>
+                <ul>
+                    <li><a href="imageoasis.art">Imageoasis</a></li>
+                    <li><a href="titlestorm.vercel.app">ViralTitles</a></li>
+                    <li><a href="adongojakes.vercel.app">Portfolio</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section social">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="https://x.com/AdongoJakes" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/Adong-o" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Rosti. All rights reserved.</p>
+        </div>
+    </footer>
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            
+            <!-- Login Form -->
+            <div class="auth-form" id="loginForm">
+                <h2>Login</h2>
+                <button class="google-btn">
+                    <img src="assets/google-icon.png" alt="Google Icon">
+                    Continue with Google
+                </button>
+                <div class="divider">
+                    <span>or</span>
+                </div>
+                <form id="loginEmailForm">
+                    <div class="form-group">
+                        <input type="email" id="loginEmail" required placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="loginPassword" required placeholder="Password">
+                    </div>
+                    <button type="submit" class="submit-btn">Login</button>
+                </form>
+                <p class="switch-text">Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+            </div>
+
+            <!-- Signup Form -->
+            <div class="auth-form" id="signupForm" style="display: none;">
+                <h2>Create Account</h2>
+                <button class="google-btn">
+                    <img src="assets/google-icon.png" alt="Google Icon">
+                    Continue with Google
+                </button>
+                <div class="divider">
+                    <span>or</span>
+                </div>
+                <form id="signupEmailForm">
+                    <div class="form-group">
+                        <input type="text" id="signupName" required placeholder="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="signupEmail" required placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="signupPassword" required placeholder="Password">
+                    </div>
+                    <button type="submit" class="submit-btn">Sign Up</button>
+                </form>
+                <p class="switch-text">Already have an account? <a href="#" id="showLogin">Login</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
