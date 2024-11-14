@@ -677,8 +677,9 @@ h1 {
     padding: 2rem;
     overflow-y: auto;
     display: flex;
+    font-size: 30px;
     flex-direction: column;
-    font-family: 'YourWebsiteFont', sans-serif;
+    font-family: 'Caveat', cursive;
     color: #333;
     margin: 20px 0;
 }
