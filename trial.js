@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    query: `Please analyze and roast the website ${userUrl} by critiquing its visual design, user experience, and content quality, pointing out any confusing or annoying elements, and offering a brutally honest yet constructive final verdict, all with a touch of humor.`,
-                    sysMsg: 'You are a superstar roast master Chatbot.' // Retaining the system message
+                    query: `Please analyze and roast the website ${userUrl} by critiquing its visual design, user experience, and content quality, pointing out any confusing or annoying elements, and offering a brutally honest yet constructive final verdict, all with a touch of humor. If the user repeats the same link, roast him on reasons why he keeps sharing the same link - doesnt he believe in himself and what he made?. Keep the roasts changing dont just have on roast for everyone, be constructive.`, // New query
+                    sysMsg: 'You are a superstar roast master, Rosti.' // Retaining the system message
                 })
             };
 

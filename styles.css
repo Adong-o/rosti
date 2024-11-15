@@ -3,7 +3,9 @@
 
 /* Add Font Awesome for social icons */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css');
-
+a{
+    text-decoration: none;
+}
 .hero-section {
     max-width: 1200px;
     margin: 0 auto;
